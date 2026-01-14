@@ -29,7 +29,9 @@
 }
 
 .content {
-    margin: 25px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px 40px;
 }
 
 body {
