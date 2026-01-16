@@ -75,7 +75,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     min-height: 420px;
     position: relative;
 }
@@ -118,3 +117,18 @@ a {
     transform: scale(1.03);
     transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+.card_item:hover p {
+    transform: scale(1.03);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.titulo h2{
+    background-color:#1a1f2e;
+    padding: 10px;
+}
+
