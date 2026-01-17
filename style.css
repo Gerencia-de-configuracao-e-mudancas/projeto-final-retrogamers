@@ -219,6 +219,91 @@ a {
     background-color: white;
 }
 
+/*utilizado na página fale_conosco*/
+.form_container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1f2e;
+    border: 2px solid #B1122C; 
+    padding: 30px 40px;
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+.form_container h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000000;
+    margin-top: 0%;
+}
+
+.form_container label {
+    display: block;
+    font-size: larger;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form_container input,
+.form_container textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: medium;
+    border: 2px solid #B1122C;
+    background-color: #0B0E14;
+    font-family: 'Pixelify Sans', sans-serif;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.form_container input::placeholder,
+.form_container textarea::placeholder {
+    color: #B1122CAA;
+}
+
+.form_container button {
+    padding: 5px;
+    font-size: larger;
+    font-family: 'Pixelify Sans', sans-serif;
+    background-color: #B1122C;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form_container button:hover {
+    transform: scale(1.05);
+}
+
+.footer{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.footer h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: larger;
+    color: #B1122C;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin: 5px 0;
+}
+
+.footer p{
+    font-size: small;
+    opacity: 0.7;
+}
+
 @media(max-width:932px){
     
     .heading h1{
@@ -245,11 +330,13 @@ a {
         backdrop-filter: blur(3px);
         transition: transform 0.35s ease, opacity 0.25s ease;
         z-index: 2;
+        pointer-events: none;
     }
 
     .nav_menu.active{
         transform: translateX(-50%) translateX(0);
         opacity: 1;
+        pointer-events: auto;
     }
 
     .nav_menu ul{
