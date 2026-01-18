@@ -304,6 +304,48 @@ a {
     opacity: 0.7;
 }
 
+/*utilizado na pagina videogames*/
+
+.card_jogos {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+}
+
+.card_jogos .card_box {
+    display: flex;
+    width: 200px;
+    height: 250px;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.card_jogos .card_item {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    min-height: 320px;
+}
+
+.card_jogos .card_title {
+    display: flex;
+    opacity: 1;
+    transform: none;
+    position: absolute;
+    justify-content: center;
+}
+
+.card_jogos .card_item p{
+    padding: 0px 15px 0px 15px;
+}
+
+.card_jogos .card_box img {
+    padding: 55px 0px 10px 10px;
+}
+
+.card_jogos .card_item:hover p {
+    transform: scale(1.00);
+}
+
+
 @media(max-width:932px){
     
     .heading h1{
@@ -356,4 +398,19 @@ a {
     .card_title{
         opacity: 1;
     }
+
+    .card_jogos .card_box {
+        width: 150px;
+        height: auto;
+    }
+
+    .card_jogos .card_item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card_jogos .card_item p {
+        padding: 40px 15px 15px;
+    }
+    
 }
