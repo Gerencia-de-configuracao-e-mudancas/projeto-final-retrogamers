@@ -2,10 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 /*menu/cabeçalho*/
+
+.nav_menu {
+    display: flex;
+    margin-left: 25px;
+}
+
+.nav_menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_menu li {
+    font-size: 1.2em;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.nav_menu li:hover {
+    transform: scale(1.05);
+}
+
 .heading {
     display: flex;
     align-items: center;
-    padding: 20px, 40px;
     background-color: #B1122C;
     color: #E5E7EB;
     position: relative;
@@ -15,24 +38,6 @@
     margin-left: 25px;
     font-family: 'SEGA LOGO FONT', sans-serif;
     font-weight: 100;
-}
-
-.heading ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin-left: 25px;
-    padding: 0;
-}
-
-.heading li {
-    font-size: 1.2em;
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.heading li:hover {
-    transform: scale(1.05);
 }
 
 .content {
@@ -481,7 +486,6 @@ a {
     }
 
     .nav_menu{
-        display: flex;
         flex-direction: column;
         position: absolute;
         opacity: 0;
@@ -494,6 +498,7 @@ a {
         transition: transform 0.35s ease, opacity 0.25s ease;
         z-index: 2;
         pointer-events: none;
+        margin-left: 0;
     }
 
     .nav_menu.active{
