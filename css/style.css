@@ -1,0 +1,585 @@
+@import url('https://fonts.cdnfonts.com/css/sega-logo-font');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+/*menu/cabeçalho*/
+.heading {
+    display: flex;
+    align-items: center;
+    padding: 20px, 40px;
+    background-color: #B1122C;
+    color: #E5E7EB;
+    position: relative;
+}
+
+.heading h1 {
+    margin-left: 25px;
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    font-weight: 100;
+}
+
+.heading ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-left: 25px;
+    padding: 0;
+}
+
+.heading li {
+    font-size: 1.2em;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.heading li:hover {
+    transform: scale(1.05);
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px 40px;
+}
+
+.content h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #B1122C;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    margin: 0;
+    background-color: #0B0E14;
+    padding: 0;
+    font-family: Pixelify Sans, sans-serif;
+    color: #E5E7EB;
+}
+
+a {
+    text-decoration: none;
+    color: #E5E7EB;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+}
+
+.item {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(0, 0, 0)
+}
+
+/*utilizado na pagina consoles*/
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+.card_item {
+    background-color: #1a1f2e;
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 420px;
+    position: relative;
+}
+
+.card_box {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.card_box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card_title {
+    position: absolute;
+    top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #B1122CCC;
+    width: 100%;
+    font-size: larger;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.card_item:hover .card_title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card_item:hover .card_box img{
+    transform: scale(1.03);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card_item:hover p {
+    transform: scale(1.03);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.titulo h2{
+    background-color:#1a1f2e;
+    padding: 10px;
+}
+
+.section-destaque {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #1a1f2e;
+    border-left: 5px solid #B1122C;
+    border-radius: 8px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #B1122C, #E5E7EB);
+}
+
+.timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-left {
+    margin-right: 50%;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.timeline-right {
+    margin-left: 50%;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.timeline-marker {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+}
+
+.timeline-left .timeline-marker {
+    right: -40px;
+}
+
+.timeline-right .timeline-marker {
+    left: -40px;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #B1122C;
+    border: 4px solid #0B0E14;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 4px #E5E7EB;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 0 0 6px #E5E7EB, 0 0 15px rgba(177, 18, 44, 0.6);
+}
+
+.timeline-content {
+    position: relative;
+}
+
+.timeline-period {
+    font-size: 1.3em;
+    color: #B1122C;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.timeline-box {
+    background-color: #1a1f2e;
+    border-left: 4px solid #B1122C;
+    padding: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-box {
+    background-color: rgba(177, 18, 44, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-context {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.timeline-highlight {
+    margin-top: 15px;
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #E5E7EB;
+}
+
+.timeline-highlight ul {
+    margin: 10px 0 0 0;
+    padding-left: 20px;
+}
+
+.timeline-highlight li {
+    margin: 8px 0;
+}
+
+
+.section-destaque h2 {
+    color: #B1122C;
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.section-destaque p {
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+.cta-container {
+    margin: 60px 0;
+    padding: 50px 30px;
+    background: linear-gradient(135deg, #B1122C 0%, #8B0E23 100%);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cta-container h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cta-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    background-color: #0B0E14;
+    color: #E5E7EB;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #E5E7EB;
+    color: #B1122C;
+    transform: scale(1.05);
+}
+
+.menu_mobile{
+    display: none;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/*utilizado na página fale_conosco*/
+.form_container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1f2e;
+    border: 2px solid #B1122C; 
+    padding: 30px 40px;
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+.form_container h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000000;
+    margin-top: 0%;
+}
+
+.form_container label {
+    display: block;
+    font-size: larger;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form_container input,
+.form_container textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: medium;
+    border: 2px solid #B1122C;
+    background-color: #0B0E14;
+    font-family: 'Pixelify Sans', sans-serif;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.form_container input::placeholder,
+.form_container textarea::placeholder {
+    color: #B1122CAA;
+}
+
+.form_container button {
+    padding: 5px;
+    font-size: larger;
+    font-family: 'Pixelify Sans', sans-serif;
+    background-color: #B1122C;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form_container button:hover {
+    transform: scale(1.05);
+}
+
+.footer{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.footer h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: larger;
+    color: #B1122C;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin: 5px 0;
+}
+
+.footer p{
+    font-size: small;
+    opacity: 0.7;
+}
+
+/*utilizado na pagina videogames*/
+
+.card_jogos {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+}
+
+.card_jogos .card_box {
+    display: flex;
+    width: 200px;
+    height: 250px;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.card_jogos .card_item {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    min-height: 320px;
+}
+
+.card_jogos .card_title {
+    display: flex;
+    opacity: 1;
+    transform: none;
+    position: absolute;
+    justify-content: center;
+}
+
+.card_jogos .card_item p{
+    padding: 0px 15px 0px 15px;
+}
+
+.card_jogos .card_box img {
+    padding: 55px 0px 10px 10px;
+}
+
+.card_jogos .card_item:hover p {
+    transform: scale(1.00);
+}
+
+
+@media(max-width:932px){
+    
+    .heading h1{
+        font-size: 1.5rem;
+    }
+
+    .menu_mobile{
+        display: block;
+        margin-left: auto;
+        margin-right: 25px;
+        z-index: 2;
+    }
+
+    .nav_menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        opacity: 0;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: #1a1f2e83;
+        backdrop-filter: blur(3px);
+        transition: transform 0.35s ease, opacity 0.25s ease;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .nav_menu.active{
+        transform: translateX(-50%) translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav_menu ul{
+        flex-direction: column;
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    .nav_menu li{
+        font-size: large;
+        text-align: center;
+    }
+
+    .card_container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .card_title{
+        opacity: 1;
+    }
+
+    .card_jogos .card_box {
+        width: 150px;
+        height: auto;
+    }
+
+    .card_jogos .card_item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card_jogos .card_item p {
+        padding: 40px 15px 15px;
+    }
+
+    /* Timeline responsivo para mobile */
+    .timeline::before {
+        left: 10px;
+        transform: translateX(0);
+    }
+
+    .timeline-item {
+        margin-bottom: 30px;
+    }
+
+    .timeline-left,
+    .timeline-right {
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 50px;
+        text-align: left;
+    }
+
+    .timeline-left .timeline-marker,
+    .timeline-right .timeline-marker {
+        left: -30px;
+        right: auto;
+    }
+
+    .timeline-dot {
+        width: 18px;
+        height: 18px;
+        box-shadow: 0 0 0 3px #0B0E14, 0 0 0 6px #E5E7EB;
+    }
+
+    .timeline-period {
+        font-size: 1.1em;
+    }
+
+    .timeline-box {
+        padding: 15px;
+        border-left: 3px solid #B1122C;
+    }
+
+    .timeline-context {
+        font-size: 0.9em;
+    }
+
+    .timeline-highlight {
+        font-size: 0.85em;
+    }
+    
+}
